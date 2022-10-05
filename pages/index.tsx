@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { Header, HeaderLeft, HeaderRight } from '../components/header'
+import { Logo } from '../components/logo'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -13,7 +14,7 @@ const Home: NextPage = () => {
       </Head>
       <div className={styles.app}>
         <Header>
-          <HeaderLeft>Logo</HeaderLeft>
+          <HeaderLeft><Logo/></HeaderLeft>
           <HeaderRight>Price</HeaderRight>
         </Header>
       </div>
