@@ -1,0 +1,36 @@
+.header {
+	display: flex;
+	position: relative;
+	justify-content: space-between;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+	background-color: var(--surface-color, #fefefe);
+	font-family: var(--font-family);
+	font-size: 1rem;
+	min-height: 60px;
+	color: var(--text-color);
+	touch-action: none;
+}
+
+.header__left,
+.header__right {
+	display: flex;
+	align-items: center; /* vertical align items */
+}
+
+.header__left {
+	overflow-x: hidden; /* hide on small screens so we are sure the Order button stays in view */
+	display: flex;
+	flex-shrink: 10;
+	flex-grow: 1;
+}
+
+.header__right {
+	padding: 0 0.5em;
+	overflow: hidden; /* Prevent from growing if child doesn't fit (needed for iOS) */
+	flex-shrink: 1; /* Allow size smaller so we can measure larger CTA button */
+	flex-grow: 1; /* Make full available width */
+	min-width: 76px; /* Define a minimum size so it doesn't shrink smaller than the minimum CTA button */
+	display: flex;
+	justify-content: flex-end;
+}
+

@@ -1,0 +1,14 @@
+:root {
+  --primary-color: #009fdc;
+  --surface-color: rgba(244, 244, 244, 1);
+  --on-surface-color: #3e4551;
+  --font-family: roboto, arial, sans-serif;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  margin: 0;
+}
