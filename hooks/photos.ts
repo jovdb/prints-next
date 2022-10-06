@@ -1,20 +1,18 @@
 import create from "zustand";
 import shallow from "zustand/shallow";
 import { photosStore, IPhotosStore, getPhoto, getPhotos } from "../store/photos";
-import { IPhoto, Photos } from "../types";
+import { Photos } from "../types";
 
 export const usePhotosStore = create(photosStore);
 
-const photosArraySelector = (state: IPhotosStore) => getPhotos(state.photos);
+const photosSelector = (state: IPhotosStore) => state.photos;
 const resetSelector = (state: IPhotosStore) => state.reset;
 
 export function usePhotos() {
-	const photos = usePhotosStore(photosArraySelector, shallow);
+	const photos = usePhotosStore(photosSelector, shallow);
 	const reset = usePhotosStore(resetSelector);
-	return [photos,	reset] as [photos: readonly IPhoto[], setPhotos: (photos: Photos) => void];
+	return [photos,	reset] as [photos: Photos, setPhotos: (photos: Photos) => void];
 }
-
-const photosSelector = (state: IPhotosStore) => state.photos;
 
 export function usePhoto(photoId: string | undefined) {
 	const photos = usePhotosStore(photosSelector);

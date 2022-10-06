@@ -50,8 +50,8 @@ export let printsStore = create<IPrintsStore>(
 
 
 // Selectors
-export function getTotalPrice(prints: readonly IPrint[]) {
-	return prints
+export function getTotalPrice(prints: Prints) {
+	return Object.values(prints)
 		.reduce((prev, print) => prev + print.quantity * 0.5, 0);
 };
 
