@@ -8,6 +8,7 @@ import styles from '../styles/Home.module.css'
 import initialState  from "../public/data/state.json";
 import { usePhotosActions } from '../hooks/photos'
 import { usePrintsActions } from '../hooks/prints'
+import { Price } from '../components/price'
 
 const Home: NextPage = () => {
   const { reset: resetPhotos} = usePhotosActions();
@@ -31,7 +32,7 @@ const Home: NextPage = () => {
       <div className={styles.app}>
         <Header>
           <HeaderLeft><Logo/></HeaderLeft>
-          <HeaderRight>Price</HeaderRight>
+          <HeaderRight><Price /></HeaderRight>
         </Header>
       </div>
     </>
