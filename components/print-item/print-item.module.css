@@ -1,0 +1,38 @@
+.print-item {
+	padding: 10px;
+}
+
+.print-item__img {
+	width: 100%;
+	display: inline-block;
+	justify-content: center;
+	text-align: center;
+	height: 205px;
+
+	/* background-image: url('./loading.gif'); */
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+@media (min-width: 600px) {
+	.print-item__img {
+		width: 320px
+	}
+}
+
+.print-item__img img {
+	width: 100%;
+	height: auto;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3	);
+	cursor: pointer;
+}
+
+.print-item__side {
+	display: inline-block;
+	padding: 10px;
+	vertical-align: top;
+}
+
+.print-item__side input[type=number]::-webkit-inner-spin-button {
+    opacity: 1
+}

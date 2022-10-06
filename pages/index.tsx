@@ -9,6 +9,7 @@ import initialState  from "../public/data/state.json";
 import { usePhotosActions } from '../hooks/photos'
 import { usePrintsActions } from '../hooks/prints'
 import { Price } from '../components/price'
+import { Prints } from '../components/prints'
 
 const Home: NextPage = () => {
   const { reset: resetPhotos} = usePhotosActions();
@@ -34,6 +35,7 @@ const Home: NextPage = () => {
           <HeaderLeft><Logo/></HeaderLeft>
           <HeaderRight><Price /></HeaderRight>
         </Header>
+        <Prints />
       </div>
     </>
   )
