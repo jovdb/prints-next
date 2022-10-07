@@ -12,6 +12,7 @@ import { Price } from '../components/price'
 import { Prints } from '../components/prints'
 import { useEditPrintId } from '../hooks/router'
 import { PrintEdit } from '../components/print-edit'
+import { BottomMenu } from '../components/bottom-menu'
 
 const Home: NextPage = () => {
   const { reset: resetPhotos} = usePhotosActions();
@@ -39,8 +40,13 @@ const Home: NextPage = () => {
           <HeaderLeft><Logo/></HeaderLeft>
           <HeaderRight><Price /></HeaderRight>
         </Header>
-        {!editPrintId && <Prints />}
-        {editPrintId && <PrintEdit />}
+        <div className={styles.app__content}>
+          {!editPrintId && <Prints />}
+          {editPrintId && <PrintEdit />}
+        </div>
+        <div className={styles.app__footer}>
+          <BottomMenu />
+        </div>
       </div>
     </>
   )

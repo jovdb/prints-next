@@ -1,0 +1,11 @@
+.bottom-menu {
+	display: flex;
+	flex-grow: 1;
+}
+
+.bottom-menu__button {
+	height: 60px;
+	flex-grow: 1;
+	flex-shrink: 0;
+	align-items: center;
+}

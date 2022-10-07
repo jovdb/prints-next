@@ -1,4 +1,4 @@
-import { IPhoto, IPrint } from "../../stores/store";
+import { IPhoto, IPrint } from "../../types";
 import styles from "./print-edit.module.css";
 
 export const PrintEdit = ({
