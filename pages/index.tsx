@@ -11,6 +11,7 @@ import { usePrintsActions } from '../hooks/prints'
 import { Price } from '../components/price'
 import { Prints } from '../components/prints'
 import { useEditPrintId } from '../hooks/router'
+import { PrintEdit } from '../components/print-edit'
 
 const Home: NextPage = () => {
   const { reset: resetPhotos} = usePhotosActions();
@@ -39,7 +40,7 @@ const Home: NextPage = () => {
           <HeaderRight><Price /></HeaderRight>
         </Header>
         {!editPrintId && <Prints />}
-        {editPrintId && "EDIT: " + editPrintId}
+        {editPrintId && <PrintEdit />}
       </div>
     </>
   )
