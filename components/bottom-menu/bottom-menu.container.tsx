@@ -1,17 +1,23 @@
+import { useLabels } from "../../hooks/labels";
 import { useEditPrintId } from "../../hooks/router";
 import { BottomMenu, BottomMenuButton } from "./bottom-menu";
 
 export const BottomMenuContainer = () => {
 	const [editPrintId] = useEditPrintId();
+	const [labels] = useLabels([
+		"Label.PrintEdit.Format",
+		"Label.PrintEdit.Effect",
+		"Label.Prints.AdddPhotos",
+	]);
 
 	if (editPrintId) {
 		return (
 			<BottomMenu>
 				<BottomMenuButton>
-					Format
+					{labels["Label.PrintEdit.Format"]}
 				</BottomMenuButton>
 				<BottomMenuButton>
-					Transform
+					{labels["Label.PrintEdit.Effect"]}
 				</BottomMenuButton>
 			</BottomMenu>
 		);
@@ -20,7 +26,7 @@ export const BottomMenuContainer = () => {
 	return (
 		<BottomMenu>
 			<BottomMenuButton>
-				Add foto&apos;s
+				{labels["Label.Prints.AdddPhotos"]}
 			</BottomMenuButton>
 		</BottomMenu>
 	);

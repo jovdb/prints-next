@@ -1,14 +1,17 @@
+import { Labels } from "../../hooks/labels";
 import { IPrint, IPhoto } from "../../types";
 import styles from "./print-item.module.css";
 
 export const PrintItem = ({
 	print,
 	photo,
+	labels,
 	onSetQuantity,
 	onEditClicked,
 }: {
 	print: IPrint;
 	photo: IPhoto;
+	labels: Labels<"Label.Quantity">;
 	onSetQuantity: (quantity: number) => void;
 	onEditClicked: () => void;
 }) => {
@@ -24,7 +27,7 @@ export const PrintItem = ({
 				/>
 			</div>
 			<div className={styles["print-item__side"]}>
-				<label htmlFor={"quantity_" + print.printId} >Quanitiy:</label>
+				<label htmlFor={"quantity_" + print.printId} >{labels["Label.Quantity"]}:</label>
 				<input
 					id={"quantity_" + print.printId}
 					type="number"

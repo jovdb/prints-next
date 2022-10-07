@@ -1,3 +1,4 @@
+import { useLabels } from "../../hooks/labels";
 import { usePhotos } from "../../hooks/photos";
 import { usePrints, usePrintsActions } from "../../hooks/prints";
 import { useEditPrintId } from "../../hooks/router";
@@ -8,6 +9,8 @@ export const Prints = () => {
 	const [prints] = usePrints();
 	const [photos] = usePhotos();
 	const { updatePrint } = usePrintsActions();
+	const [labels] = useLabels(["Label.Quantity"]);
+
 	if (editPrintId) return null;
 
 	return (
@@ -20,6 +23,7 @@ export const Prints = () => {
 						key={print.printId}
 						photo={photo}
 						print={print}
+						labels={labels}
 						onSetQuantity={(quantity) => updatePrint(print.printId, { ...print, quantity })}
 						onEditClicked={() => setEditPrintId(print.printId)}
 					/>
