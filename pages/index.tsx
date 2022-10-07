@@ -10,10 +10,13 @@ import { usePhotosActions } from '../hooks/photos'
 import { usePrintsActions } from '../hooks/prints'
 import { Price } from '../components/price'
 import { Prints } from '../components/prints'
+import { useEditPrintId } from '../hooks/router'
 
 const Home: NextPage = () => {
   const { reset: resetPhotos} = usePhotosActions();
   const { reset: resetPrints} = usePrintsActions();
+
+  const [editPrintId] = useEditPrintId();
 
   // Initialize
   // TODO: Fill from server
@@ -35,7 +38,8 @@ const Home: NextPage = () => {
           <HeaderLeft><Logo/></HeaderLeft>
           <HeaderRight><Price /></HeaderRight>
         </Header>
-        <Prints />
+        {!editPrintId && <Prints />}
+        {editPrintId && "EDIT: " + editPrintId}
       </div>
     </>
   )

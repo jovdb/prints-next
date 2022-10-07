@@ -1,13 +1,14 @@
 import { usePhotos } from "../../hooks/photos";
 import { usePrints, usePrintsActions } from "../../hooks/prints";
+import { useEditPrintId } from "../../hooks/router";
 import { PrintItem } from "../print-item";
 
 export const Prints = () => {
-	const editingPrintId = undefined;
+	const [editPrintId, setEditPrintId] = useEditPrintId();
 	const [prints] = usePrints();
 	const [photos] = usePhotos();
 	const { updatePrint } = usePrintsActions();
-	if (editingPrintId) return null;
+	if (editPrintId) return null;
 
 	return (
 		<>
@@ -20,7 +21,7 @@ export const Prints = () => {
 						photo={photo}
 						print={print}
 						onSetQuantity={(quantity) => updatePrint(print.printId, { ...print, quantity })}
-						onEditClicked={() => alert("Select " + print.printId)}
+						onEditClicked={() => setEditPrintId(print.printId)}
 					/>
 				);
 			})}
