@@ -14,8 +14,18 @@ import { useEditPrintId } from '../hooks/router'
 import { PrintEdit } from '../components/print-edit'
 import { BottomMenu } from '../components/bottom-menu'
 import { QueryClient, QueryClientProvider } from 'react-query'
+import labels from "../public/data/labels.json";
 
 const queryClient = new QueryClient()
+
+export function getStaticProps() {
+  const serverLabels = labels; // Not yet fetched (No API available)
+  return {
+    props: {
+      serverLabels,
+    },
+  };
+}
 
 const Home: NextPage = () => {
   const { reset: resetPhotos} = usePhotosActions();
