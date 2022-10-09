@@ -7,7 +7,7 @@ export const PriceContainer = () => {
 	const price = getTotalPrice(prints);
 
 	return (
-		<Price value={price + "€"} />
+		<Price value={price ? price + "€" : ""} />
 	);
 };
 PriceContainer.displayName = "PriceContainer";
