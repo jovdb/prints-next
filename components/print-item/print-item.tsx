@@ -35,7 +35,7 @@ export const PrintItem = ({
 					min="1"
 					max="999"
 					onChange={(e) => {
-						onSetQuantity(parseInt(e.target.value, 10));
+						onSetQuantity(parseInt(e.target.value, 10) || 1);
 					}}
 				/>
 			</div>
