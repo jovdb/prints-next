@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 
 const isProd = process.env.NODE_ENV === "production";
+console.log("isProd: " + isProd);
 
 const nextConfig = {
   reactStrictMode: true,
@@ -20,6 +21,8 @@ const nextConfig = {
    * Replace `prints-next` with your Github repo project name.
    */
   assetPrefix: isProd ? "/prints-next/" : "",
+
+  basePath: isProd ? "/prints-next" : undefined,
 
   /**
    * Disable server-based image optimization.
