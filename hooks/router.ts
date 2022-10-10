@@ -8,10 +8,10 @@ export function useEditPrintId() {
 		(regExResult || [])[1] || "",
 		(editPrintId: string | undefined) => {
 			if (editPrintId) {
-				router.push({ hash: `/edit/${editPrintId}` });
+				router.push({ hash: `/edit/${editPrintId}`, query: router.query });
 			} else {
 				// router.back();
-				router.push({ hash: "" });
+				router.push({ hash: "", query: router.query});
 			}
 		}
 	] as const;
