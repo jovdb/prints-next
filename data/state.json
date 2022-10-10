@@ -1,0 +1,72 @@
+{
+	"photos": {
+		"1a": {
+			"id": "1a",
+			"url": "https://picsum.photos/id/237/800/576",
+			"fileName": "Photo1.jpg",
+			"fileSize": 1020153
+		},
+		"2": {
+			"id": "2",
+			"url": "https://picsum.photos/id/236/576/800",
+			"fileName": "Photo8.jpg",
+			"fileSize": 1321465
+		},
+		"3": {
+			"id": "3",
+			"url": "https://picsum.photos/id/235/800/576",
+			"fileName": "Photo15.jpg",
+			"fileSize": 1321465
+		},
+		"4": {
+			"id": "4",
+			"url": "https://picsum.photos/id/234/800/576",
+			"fileName": "Photo 11.jpg",
+			"fileSize": 1321465
+		},
+		"5": {
+			"id": "5",
+			"url": "https://picsum.photos/id/233/800/576",
+			"fileName": "Photo5.jpg",
+			"fileSize": 1321465
+		}
+	},
+	"prints": {
+		"1q": {
+			"printId": "1q",
+			"photoId": "2",
+			"quantity": 1,
+			"format": "15"
+		},
+		"2": {
+			"printId": "2",
+			"photoId": "1a",
+			"quantity": 2,
+			"format": "18"
+		},
+		"3": {
+			"printId": "3",
+			"photoId": "2",
+			"quantity": 1,
+			"format": "15"
+		},
+		"4": {
+			"printId": "4",
+			"photoId": "3",
+			"quantity": 1,
+			"format": "15"
+		},
+		"5": {
+			"printId": "5",
+			"photoId": "4",
+			"quantity": 1,
+			"format": "15"
+		},
+		"6": {
+			"printId": "6",
+			"photoId": "5",
+			"quantity": 1,
+			"format": "15"
+		}
+	}
+}
