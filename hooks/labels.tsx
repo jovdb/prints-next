@@ -1,10 +1,11 @@
+import { useRouter } from "next/router";
 import { createContext, PropsWithChildren, useContext } from "react";
 import { useQuery } from "react-query";
 
 // ------
 // Types
 // ------
-import type * as LabelsJson from "../public/data/labels.json";
+import type * as LabelsJson from "../public/data/labels.en.json";
 export type LabelNames = keyof typeof LabelsJson;
 export type Labels<TLabels extends LabelNames | "any" = "any"> = TLabels extends "any"
 	? Partial<Record<LabelNames, string>>
@@ -67,10 +68,10 @@ export function useLabels<TLabel extends LabelNames>(labels: TLabel[]): [{[T in 
 	if (typeof window !== "undefined") {
 		if (contextLabels) {
 			if (labelsToFetch.length) {
-				console.warn(`Not all server side labels are prefetched, missing labels in getStaticProps: ${labelsToFetch.join(", ")}`);
+				console.error(`Not all server side labels are prefetched, missing labels in getStaticProps: ${labelsToFetch.join(", ")}`);
 			}
 		} else {
-			console.warn(`Following labels could be prefetched: ${labelsToFetch.join(", ")}.\nExport a getStaticProps function in your page and return label values as props: { serverLabels: Record<key, value> } }.`);
+			console.error(`Following labels could be prefetched: ${labelsToFetch.join(", ")}.\nExport a getStaticProps function in your page and return label values as props: { serverLabels: Record<key, value> } }.`);
 		}
 	}
 
