@@ -16,7 +16,6 @@ import { BottomMenu } from '../../components/bottom-menu'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import labelsEn from "../../public/data/labels.en.json";
 import labelsNl from "../../public/data/labels.nl.json";
-import { useRouter } from 'next/router'
 
 const queryClient = new QueryClient()
 

@@ -1,5 +1,6 @@
 import { Labels } from "../../hooks/labels";
 import { IPrint, IPhoto } from "../../types";
+import { PlaceholderImage } from "../placeholder-image";
 import styles from "./print-item.module.css";
 
 export const PrintItem = ({
@@ -19,7 +20,8 @@ export const PrintItem = ({
 		<div className={styles["print-item"]}>
 			<div className={styles["print-item__img"]}>{/* Create a Preview component */}
 				{/* eslint-disable-next-line @next/next/no-img-element */}
-				<img
+				<PlaceholderImage
+					aspectRatio={(photo.width / photo.height)}
 					loading="lazy"
 					onClick={(e) => { onEditClicked(); e.preventDefault(); }}
 					src={photo?.url}
