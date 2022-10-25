@@ -1,5 +1,5 @@
 # Simple SSG Next App
-Simple NextJs to test CSR performance and compare with other solutions
+Simple NextJs to test SSG performance and compare with other solutions
 
 - Create React App
 - Static Site Generator
