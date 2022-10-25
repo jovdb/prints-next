@@ -8,3 +8,9 @@ Simple NextJs to test CSR performance and compare with other solutions
 - Inline add SVG assets (logo)
 
 You can test the [EN page here](https://jovdb.github.io/prints-next/en) and the [NL page here](https://jovdb.github.io/prints-next/nl)
+
+## Lighthouse score
+
+![Score](https://raw.githubusercontent.com/jovdb/prints-next/main/docs/next1.png)
+
+![Timings](https://raw.githubusercontent.com/jovdb/prints-next/main/docs/next2.png) 
