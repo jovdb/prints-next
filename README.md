@@ -1,9 +1,8 @@
 # Simple SSG Next App
 Simple NextJs to test SSG performance and compare with other solutions
 
-- Create React App
 - Static Site Generator
-- 2 Languages created 
+- 2 languages pregenerated 
 - Client side routing added (browser back can be used to exit edit)
 - Inline add SVG assets (logo)
 
